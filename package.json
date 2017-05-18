@@ -1,0 +1,26 @@
+{
+  "name": "node-es-local",
+  "version": "1.0.0",
+  "description": "Downloads and starts a local elasticsearch node for integration testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhythminme/node-es-local.git"
+  },
+  "keywords": [
+    "elasticsearch",
+    "testing"
+  ],
+  "author": "rhythmin.me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhythminme/node-es-local/issues"
+  },
+  "homepage": "https://github.com/rhythminme/node-es-local#readme",
+  "dependencies": {
+    "adm-zip": "^0.4.7"
+  }
+}
