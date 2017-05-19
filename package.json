@@ -4,7 +4,7 @@
   "description": "Downloads and starts a local elasticsearch node for integration testing",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "echo \"Nothing to do yet\""
   },
   "repository": {
     "type": "git",
