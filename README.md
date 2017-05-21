@@ -1,4 +1,4 @@
-# node-es-local
+# node-es-local [![CircleCI](https://circleci.com/gh/rhythminme/node-es-local.svg?style=svg&circle-token=394831b277a718b3995f7785fed54b873408752d)](https://circleci.com/gh/rhythminme/node-es-local)
 A simple low-dependency nodejs module that downloads, installs and starts elasticsearch v5.x locally for integration testing. Please note that this module currently only supports elasticsearch v5.x i.e. older versions are not supported.
 
 The module attempts to download and unzip the package from the [Official Elasticsearch artifacts source](https://artifacts.elastic.co/downloads), if not already downloaded, and starts elasticsearch as a detached nodejs background process listening on the specified port.
