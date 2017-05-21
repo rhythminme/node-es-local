@@ -1,6 +1,6 @@
 {
   "name": "node-es-local",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Downloads and starts a local elasticsearch node for integration testing",
   "main": "index.js",
   "scripts": {
