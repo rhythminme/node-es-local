@@ -49,4 +49,11 @@ new ElasticsearchLocal(elasticsearchVersion, elasticsearchPort, {
 }).stop()
 ```
 
-simples!
+Port **9200** is the *default port* if not specified and **./.cachedArtifacts** and **./.installs** are the *default cache* and *default installation* directories. Hence, if you are ok with the defaults, the following script is all you need:
+
+```javascript
+const ElasticsearchLocal = require('node-es-local')
+new ElasticsearchLocal('5.2.0').start()
+```
+
+Simples!

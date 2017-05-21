@@ -7,8 +7,8 @@ const retry = require('./lib/retry');
 class ElasticsearchLocal {
   constructor(version, port, directories) {
     this.namePrefix = 'integration';
-    this.version = version;
-    this.port = port;
+    this.version = version || '5.2.0';
+    this.port = port || 9200;
     this.directories = directories || {};
     this.directories.cacheDirectory = this.directories.cacheDirectory || './.cachedArtifacts';
     this.directories.installationDirectory = this.directories.installationDirectory || './.installs';
