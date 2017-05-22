@@ -32,6 +32,7 @@ new ElasticsearchLocal(elasticsearchVersion, elasticsearchPort, {
   installationDirectory: targetDirectory
 }).start()
 ```
+*start()* returns a promise. 
 
 To stop a local instance of elasticsearch started by the previous script:
 
@@ -48,6 +49,7 @@ new ElasticsearchLocal(elasticsearchVersion, elasticsearchPort, {
   installationDirectory: targetDirectory
 }).stop()
 ```
+*stop()* returns a promise.
 
 Port **9200** is the *default port* if not specified and **./.cachedArtifacts** and **./.installs** are the *default cache* and *default installation* directories. Hence, if you are ok with the defaults, the following script is all you need:
 
@@ -57,3 +59,23 @@ new ElasticsearchLocal('5.2.0').start()
 ```
 
 Simples!
+
+## Using es-node-local in integration tests
+
+The following example shows how you can use node-es-local with mocha to start a local instance of elasticsearch for integration tests:
+
+```javascript
+const ElasticsearchLocal = require('node-es-local')
+
+describe('Some feature eg search', () => {
+  before('given an index with some entries', () => {
+    return new ElasticsearchLocal('5.2.0').start()  // return the promise
+      .then(() => {
+        // Put some data in...
+      })
+  })
+
+  after(() => {
+    return new ElasticsearchLocal('5.2.0').stop() // return the promise
+  })
+```
