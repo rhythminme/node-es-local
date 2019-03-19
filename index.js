@@ -30,7 +30,8 @@ class ElasticsearchLocal {
             return archiver.extractAsync(filename, this.version, this.directories.installationDirectory)
           }).then((binaryPath) => {
             return elasticsearchProcess.start(this.namePrefix, binaryPath, this.port)
-          }).then(() => {
+          }).then((process) => {
+            process.unref()
             return this.checkClusterHealth(this.port, timeoutMilliseconds)
           })
       })
